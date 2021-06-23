@@ -26,6 +26,14 @@
            }
            else {
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+               
+               NSLog(@"%@",dataDictionary);
+               
+               NSArray *movies = dataDictionary[@"results"];
+               
+               for (NSDictionary *movie in movies){
+                   NSLog(@"%@",movie[@"title"]);
+               }
 
                // TODO: Get the array of movies
                // TODO: Store the movies in a property to use elsewhere
