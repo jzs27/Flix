@@ -8,6 +8,7 @@
 #import "MoviesViewController.h"
 
 @interface MoviesViewController ()
+@property (nonatomic, strong) NSArray *movies;
 
 @end
 
@@ -29,9 +30,9 @@
                
                NSLog(@"%@",dataDictionary);
                
-               NSArray *movies = dataDictionary[@"results"];
+               NSArray self.movies = dataDictionary[@"results"];
                
-               for (NSDictionary *movie in movies){
+               for (NSDictionary *movie in self.movies){
                    NSLog(@"%@",movie[@"title"]);
                }
 
