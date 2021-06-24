@@ -9,8 +9,10 @@
 #import "MovieCollectionCell.h"
 #import "UIImageView+AFNetworking.h"
 
-@interface MoviesGridViewController () <UICollectionViewDataSource, UICollectionViewDelegate>;
+@interface MoviesGridViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>;
 @property (nonatomic, strong) NSArray *movies;
+@property (nonatomic, strong) NSArray *filteredmovies;
+@property (weak, nonatomic) IBOutlet UISearchBar *movieCollectionSearchBar;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
@@ -22,6 +24,7 @@
     
     self.collectionView.dataSource=self;
     self.collectionView.delegate=self;
+    self.movieCollectionSearchBar.delegate=self;
     [self fetchMovies];
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
@@ -51,6 +54,7 @@
                
                
                self.movies=dataDictionary[@"results"];
+               self.filteredmovies=self.movies;
                [self.collectionView reloadData];
 
                // TODO: Get the array of movies
@@ -87,6 +91,34 @@
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.movies.count;
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    
+    if (searchText.length != 0) {
+        self.movies = self.filteredmovies;
+        
+        NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
+            return [evaluatedObject[@"original_title"] containsString:searchText];
+        }];
+        self.movies = [self.movies filteredArrayUsingPredicate:predicate];
+        
+        NSLog(@"%@", self.filteredmovies);
+        
+    }
+    else {
+        self.movies = self.filteredmovies;
+    }
+    
+    [self.collectionView reloadData];
+ 
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    self.movieCollectionSearchBar.showsCancelButton = YES;
+}
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+    NSString *searchText = (NSString *) self.movieCollectionSearchBar.text;
 }
 
 
