@@ -1,7 +1,7 @@
 # Project 2 - Flix
 Flix is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
 ## User Stories
 
@@ -41,7 +41,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-![](https://i.imgur.com/Biqb5R9.gif)
+
 
 GIF created with [Kap](https://getkap.co/).
 
