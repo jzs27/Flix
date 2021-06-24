@@ -17,8 +17,8 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 
-- [ ] User can tap a poster in the collection view to see a detail screen of that movie
-- [ ] User can search for a movie.
+- User can tap a poster in the collection view to see a detail screen of that movie
+- User can search for a movie.
 - [ ] All images fade in as they are loading.
 - [ ] User can view the large movie poster by tapping on a cell.
 - [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
@@ -29,8 +29,7 @@ The following **optional** features are implemented:
 - [ ] Run your app on a real device.
 
 The following **additional** features are implemented:
-
-- [ ] List anything else that you can get done to improve the app functionality!
+- User can search for a movie in the collection view.
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
