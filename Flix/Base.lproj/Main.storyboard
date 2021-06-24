@@ -63,6 +63,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbG-j7-oYY">
+                                <rect key="frame" x="158" y="97" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="No Internet"/>
+                                <connections>
+                                    <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDZ-sY-27a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -70,6 +78,7 @@
                     <navigationItem key="navigationItem" title="Movies" id="NYo-1m-08H"/>
                     <connections>
                         <outlet property="activityIndicator" destination="LFE-Go-LbN" id="x4D-Ht-MW4"/>
+                        <outlet property="alertButton" destination="FbG-j7-oYY" id="CJc-5X-dmv"/>
                         <outlet property="tableView" destination="5Vb-7j-9aV" id="ICn-Va-uUN"/>
                     </connections>
                 </viewController>

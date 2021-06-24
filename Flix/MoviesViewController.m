@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong) UIRefreshControl *refreshControl;
+@property (weak, nonatomic) IBOutlet UIButton *alertButton;
 
 @end
 
@@ -35,6 +36,21 @@
     
     
 }
+- (IBAction)showAlert:(id)sender {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Cannot Load Movies"
+                                                                               message:@"No Internet Connection"
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"OK button is pressed");
+                                                     }];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:^{
+        // optional code for what happens after the alert controller has finished presenting
+    }];
+    
+}
 
 - (void)fetchMovies{
     NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"];
@@ -42,9 +58,11 @@
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
            if (error != nil) {
+               self.alertButton.hidden =NO;
                NSLog(@"%@", [error localizedDescription]);
            }
            else {
+               
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                
                NSLog(@"%@",dataDictionary);
@@ -70,6 +88,7 @@
     [super didReceiveMemoryWarning];
     
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.movies.count;
