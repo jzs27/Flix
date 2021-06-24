@@ -155,8 +155,6 @@
 				A5843B462683928800D2B219 /* LaunchScreen.storyboard */,
 				A5843B492683928800D2B219 /* Info.plist */,
 				A5843B4A2683928800D2B219 /* main.m */,
-				A5843B7026839CE500D2B219 /* MoviesViewController.h */,
-				A5843B7126839CE500D2B219 /* MoviesViewController.m */,
 			);
 			path = Flix;
 			sourceTree = "<group>";
@@ -186,6 +184,8 @@
 				A5843B7B2683DD2500D2B219 /* DetailsViewController.m */,
 				A5843B7D268418D900D2B219 /* MoviesGridViewController.h */,
 				A5843B7E268418D900D2B219 /* MoviesGridViewController.m */,
+				A5843B7026839CE500D2B219 /* MoviesViewController.h */,
+				A5843B7126839CE500D2B219 /* MoviesViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

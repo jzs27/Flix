@@ -10,12 +10,14 @@
 #import "UIImageView+AFNetworking.h"
 #import "DetailsViewController.h"
 
-@interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 @property (nonatomic, strong) NSArray *movies;
+@property (strong,nonatomic) NSArray *filteredmovies;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong) UIRefreshControl *refreshControl;
 @property (weak, nonatomic) IBOutlet UIButton *alertButton;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -27,6 +29,7 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate=self;
+    self.searchBar.delegate=self;
     [self.activityIndicator startAnimating];
     [self fetchMovies];
     
@@ -65,13 +68,12 @@
                
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                
-               NSLog(@"%@",dataDictionary);
+               
                
                self.movies=dataDictionary[@"results"];
+               self.filteredmovies = self.movies;
                
-               for (NSDictionary *movie in self.movies){
-                   NSLog(@"%@",movie[@"title"]);
-               }
+               
                [self.tableView reloadData];
                [self.activityIndicator stopAnimating];
 
@@ -99,7 +101,7 @@
     MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
     
     NSDictionary *movie = self.movies[indexPath.row];
-    cell.titleLabel.text =movie[@"title"];
+    cell.titleLabel.text =movie[@"original_title"];
     cell.synopsisLabel.text =movie[@"overview"];
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
     NSString *posterURLString = movie[@"poster_path"];
@@ -110,6 +112,35 @@
         
     return cell;
 }
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    
+    if (searchText.length != 0) {
+        self.movies = self.filteredmovies;
+        
+        NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
+            return [evaluatedObject[@"original_title"] containsString:searchText];
+        }];
+        self.movies = [self.movies filteredArrayUsingPredicate:predicate];
+        
+        NSLog(@"%@", self.filteredmovies);
+        
+    }
+    else {
+        self.movies = self.filteredmovies;
+    }
+    
+    [self.tableView reloadData];
+ 
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    self.searchBar.showsCancelButton = YES;
+}
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+    NSString *searchText = (NSString *) self.searchBar.text;
+}
+
 
 
 #pragma mark - Navigation
