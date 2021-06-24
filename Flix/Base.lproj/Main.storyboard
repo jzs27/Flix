@@ -121,6 +121,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXh-Vn-sQn">
+                                        <rect key="frame" x="165" y="297" width="146" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="HGo-8Z-LUC"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="BKP-Ef-onC"/>
@@ -135,11 +142,12 @@
                         <outlet property="posterView" destination="rSx-0G-HLL" id="jad-Gm-AgH"/>
                         <outlet property="synopsisLabel" destination="7ST-hG-9xL" id="xlZ-il-DNt"/>
                         <outlet property="titleLabel" destination="wfj-NK-2gI" id="f8d-Xb-XJt"/>
+                        <outlet property="yearLabel" destination="PXh-Vn-sQn" id="uUZ-XL-wLt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bu8-ul-1qb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="1729"/>
+            <point key="canvasLocation" x="18.840579710144929" y="1728.3482142857142"/>
         </scene>
         <!--Collections Details View Controller-->
         <scene sceneID="wOR-fI-nps">
