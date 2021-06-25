@@ -25,6 +25,8 @@
 		A5843BCC268533E100D2B219 /* CollectionsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5843BCB268533E100D2B219 /* CollectionsDetailsViewController.m */; };
 		A5843BCF2685495D00D2B219 /* PosterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5843BCE2685495D00D2B219 /* PosterViewController.m */; };
 		A5843BD22685508800D2B219 /* PosterCollectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5843BD12685508800D2B219 /* PosterCollectionsViewController.m */; };
+		A5843BD4268620A400D2B219 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5843BD3268620A400D2B219 /* WebKit.framework */; };
+		A5843BD7268620E700D2B219 /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5843BD6268620E700D2B219 /* TrailerViewController.m */; };
 		C689C7169AAD35BAE2D7D6E5 /* Pods_Flix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A38F49A0A6181D90C6F15E /* Pods_Flix.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,9 @@
 		A5843BCE2685495D00D2B219 /* PosterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterViewController.m; sourceTree = "<group>"; };
 		A5843BD02685508800D2B219 /* PosterCollectionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterCollectionsViewController.h; sourceTree = "<group>"; };
 		A5843BD12685508800D2B219 /* PosterCollectionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterCollectionsViewController.m; sourceTree = "<group>"; };
+		A5843BD3268620A400D2B219 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		A5843BD5268620E700D2B219 /* TrailerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailerViewController.h; sourceTree = "<group>"; };
+		A5843BD6268620E700D2B219 /* TrailerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailerViewController.m; sourceTree = "<group>"; };
 		AD3119663B05651272CB2729 /* Pods-Flix-FlixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix-FlixUITests.release.xcconfig"; path = "Target Support Files/Pods-Flix-FlixUITests/Pods-Flix-FlixUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC309F71684B5CDAE35B9BF0 /* Pods-Flix-FlixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix-FlixUITests.debug.xcconfig"; path = "Target Support Files/Pods-Flix-FlixUITests/Pods-Flix-FlixUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FEBF655BD753FA503596B08D /* Pods_Flix_FlixUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flix_FlixUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5843BD4268620A400D2B219 /* WebKit.framework in Frameworks */,
 				C689C7169AAD35BAE2D7D6E5 /* Pods_Flix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +126,7 @@
 		0B8D659B1D9FACEE32AB4E80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5843BD3268620A400D2B219 /* WebKit.framework */,
 				A1A38F49A0A6181D90C6F15E /* Pods_Flix.framework */,
 				FEBF655BD753FA503596B08D /* Pods_Flix_FlixUITests.framework */,
 				6AC65A38E3B901C1CFE750D6 /* Pods_FlixTests.framework */,
@@ -201,6 +208,8 @@
 				A5843BCE2685495D00D2B219 /* PosterViewController.m */,
 				A5843BD02685508800D2B219 /* PosterCollectionsViewController.h */,
 				A5843BD12685508800D2B219 /* PosterCollectionsViewController.m */,
+				A5843BD5268620E700D2B219 /* TrailerViewController.h */,
+				A5843BD6268620E700D2B219 /* TrailerViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -477,6 +486,7 @@
 				A5843B792683C9F300D2B219 /* MovieCell.m in Sources */,
 				A5843B7226839CE500D2B219 /* MoviesViewController.m in Sources */,
 				A5843B7C2683DD2500D2B219 /* DetailsViewController.m in Sources */,
+				A5843BD7268620E700D2B219 /* TrailerViewController.m in Sources */,
 				A5843B8226841BC000D2B219 /* MovieCollectionCell.m in Sources */,
 				A5843BCC268533E100D2B219 /* CollectionsDetailsViewController.m in Sources */,
 				A5843BD22685508800D2B219 /* PosterCollectionsViewController.m in Sources */,

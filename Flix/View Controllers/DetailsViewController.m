@@ -39,57 +39,57 @@
     self.titleLabel.text = self.movie[@"title"];
     self.synopsisLabel.text = self.movie[@"overview"];
     NSString *dateinfo =self.movie[@"release_date"];
-    
-    
-    NSString *yearandmonth = [dateinfo substringToIndex:7];
-    
 
     
 
     NSString *month = [dateinfo substringFromIndex:6];
     
     if ([[month substringToIndex:1] isEqualToString:@"1"]){
-        self.monthLabel.text = @"January";
+        month = @"Jan";
     }
     if ([[month substringToIndex:1] isEqualToString:@"2"]){
-        self.monthLabel.text = @"February";
+        month = @"Feb";
     }
     if ([[month substringToIndex:1] isEqualToString:@"3"]){
-        self.monthLabel.text = @"March";
+        month = @"Mar";
     }
     if ([[month substringToIndex:1] isEqualToString:@"4"]){
-        self.monthLabel.text = @"April";
+        month = @"Apr";
     }
     
     if ([[month substringToIndex:1] isEqualToString:@"5"]){
-        self.monthLabel.text = @"May";
+        month = @"May";
     }
 
     if ([[month substringToIndex:1] isEqualToString:@"6"]){
-        self.monthLabel.text = @"June";
+        month = @"Jun";
     }
     if ([[month substringToIndex:1] isEqualToString:@"7"]){
-        self.monthLabel.text = @"July";
+        month = @"Jul";
     }
     
     if ([[month substringToIndex:1] isEqualToString:@"8"]){
-        self.monthLabel.text = @"August";
+        month = @"Aug";
     }
     if ([[month substringToIndex:1] isEqualToString:@"9"]){
-        self.monthLabel.text = @"September";
+        month = @"Sept";
     }
     
     if ([[month substringToIndex:2] isEqualToString:@"10"]){
-        self.monthLabel.text = @"October";
+        month = @"Oct";
     }
     if ([[month substringToIndex:2] isEqualToString:@"11"]){
-        self.monthLabel.text = @"November";
+        month = @"Nov";
     }
     if ([[month substringToIndex:2] isEqualToString:@"12"]){
-        self.monthLabel.text = @"December";
+        month = @"Dec";
     }
-
-    self.yearLabel.text = [dateinfo substringToIndex:4];
+    
+    NSString *year = [dateinfo substringToIndex:4];
+    NSString *monthandyear = [NSString stringWithFormat:@"%@ %@", month,year];
+    
+    
+    self.yearLabel.text = monthandyear;
     
     
     
