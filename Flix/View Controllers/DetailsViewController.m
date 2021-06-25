@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UILabel *monthLabel;
 
 @end
 
@@ -37,8 +38,60 @@
     
     self.titleLabel.text = self.movie[@"title"];
     self.synopsisLabel.text = self.movie[@"overview"];
-    NSString *year =self.movie[@"release_date"];
-    self.yearLabel.text = [year substringToIndex:4];
+    NSString *dateinfo =self.movie[@"release_date"];
+    
+    
+    NSString *yearandmonth = [dateinfo substringToIndex:7];
+    
+
+    
+
+    NSString *month = [dateinfo substringFromIndex:6];
+    
+    if ([[month substringToIndex:1] isEqualToString:@"1"]){
+        self.monthLabel.text = @"January";
+    }
+    if ([[month substringToIndex:1] isEqualToString:@"2"]){
+        self.monthLabel.text = @"February";
+    }
+    if ([[month substringToIndex:1] isEqualToString:@"3"]){
+        self.monthLabel.text = @"March";
+    }
+    if ([[month substringToIndex:1] isEqualToString:@"4"]){
+        self.monthLabel.text = @"April";
+    }
+    
+    if ([[month substringToIndex:1] isEqualToString:@"5"]){
+        self.monthLabel.text = @"May";
+    }
+
+    if ([[month substringToIndex:1] isEqualToString:@"6"]){
+        self.monthLabel.text = @"June";
+    }
+    if ([[month substringToIndex:1] isEqualToString:@"7"]){
+        self.monthLabel.text = @"July";
+    }
+    
+    if ([[month substringToIndex:1] isEqualToString:@"8"]){
+        self.monthLabel.text = @"August";
+    }
+    if ([[month substringToIndex:1] isEqualToString:@"9"]){
+        self.monthLabel.text = @"September";
+    }
+    
+    if ([[month substringToIndex:2] isEqualToString:@"10"]){
+        self.monthLabel.text = @"October";
+    }
+    if ([[month substringToIndex:2] isEqualToString:@"11"]){
+        self.monthLabel.text = @"November";
+    }
+    if ([[month substringToIndex:2] isEqualToString:@"12"]){
+        self.monthLabel.text = @"December";
+    }
+
+    self.yearLabel.text = [dateinfo substringToIndex:4];
+    
+    
     
     [self.titleLabel sizeToFit];
     [self.synopsisLabel sizeToFit];
