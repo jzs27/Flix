@@ -178,6 +178,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sc-Jw-82d">
+                                        <rect key="frame" x="151" y="328" width="255" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="HGo-8Z-LUC"/>
@@ -190,6 +197,7 @@
                     <navigationItem key="navigationItem" title="Details" id="Bru-99-pj1"/>
                     <connections>
                         <outlet property="backdropView" destination="wq2-y2-aXA" id="0VM-ci-aMh"/>
+                        <outlet property="genreLabel" destination="0Sc-Jw-82d" id="yJe-59-1En"/>
                         <outlet property="posterView" destination="rSx-0G-HLL" id="jad-Gm-AgH"/>
                         <outlet property="synopsisLabel" destination="7ST-hG-9xL" id="xlZ-il-DNt"/>
                         <outlet property="titleLabel" destination="wfj-NK-2gI" id="f8d-Xb-XJt"/>
@@ -209,7 +217,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0dM-Jf-Q8N">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="55" width="414" height="787"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -217,6 +225,15 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-8C-TxH">
+                                <rect key="frame" x="0.0" y="0.0" width="74" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrowshape.turn.up.left" catalog="system"/>
+                                <connections>
+                                    <action selector="backButton:" destination="fy4-NX-xaY" eventType="touchUpInside" id="4iO-cP-c90"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6YW-Yl-GvC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -240,6 +257,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oL1-sX-Rdl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -349,6 +367,7 @@
         <segue reference="Wgy-L5-nmJ"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="play" catalog="system" width="120" height="128"/>
         <image name="reel_tabbar_icon" width="25" height="25"/>

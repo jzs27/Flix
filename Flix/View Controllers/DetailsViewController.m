@@ -14,7 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
-@property (weak, nonatomic) IBOutlet UILabel *monthLabel;
+@property (weak, nonatomic) IBOutlet UILabel *genreLabel;
+
 
 @end
 
@@ -135,6 +136,33 @@
     
     [self.titleLabel sizeToFit];
     [self.synopsisLabel sizeToFit];
+    
+    NSArray *genre_ids = self.movie[@"genre_ids"];
+    
+    
+    NSString *genre_id = genre_ids[0];
+    
+    NSDictionary *genres=@{@28:@"Action",@12:@"Adventure",@16:@"Animation",@35:@"Comedy",@80:@"Crime",@99:@"Documentary",@18:@"Drama",@10751:@"Family",@14:@"Fantasy",@36:@"History",@27:@"Horror",@10402:@"Music",@9648:@"Mystery",@10749:@"Romance",@878:@"Science Fiction",@10770:@"TV Movie",@53:@"Thriller",@10752:@"War",@37:@"Western"};
+
+    NSLog(@"%@", genre_id);
+   
+    
+    
+    NSString *genreStringNew = @"";
+    
+    for (NSString *gid in genre_ids){
+        if (genreStringNew.length >0){
+            genreStringNew = [genreStringNew stringByAppendingString:@", "];
+        }
+        NSString *genreString = [genres objectForKey: gid];
+        genreStringNew = [genreStringNew stringByAppendingString:genreString];
+    }
+    
+    NSLog(@"%@",genreStringNew);
+    self.genreLabel.text =genreStringNew;
+    
+    
+    
     // Do any additional setup after loading the view.
 }
 

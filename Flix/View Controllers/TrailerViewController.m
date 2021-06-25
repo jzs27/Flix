@@ -14,25 +14,18 @@
 @end
 
 @implementation TrailerViewController
+- (IBAction)backButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     NSString *movieID = self.movie[@"id"];
-    //NSString *movieID2 = [movieID substringToIndex:4];
-    
-    NSLog(@"%@", movieID);
-    
-    //NSLog(@"%@", movieID2);
-
     
     NSString *urlBeginning =@"https://api.themoviedb.org/3/movie/";
     NSString *urlEnd = @"/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US";
     NSString *urlFinal = [NSString stringWithFormat:@"%@%@%@", urlBeginning,movieID,urlEnd];
-    
-    NSLog(@"%@", urlFinal);
-    
-    //NSURL *urlTrailer = [NSURL URLWithString:urlFinal];
     
     NSURL *url = [NSURL URLWithString:urlFinal];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
@@ -48,7 +41,7 @@
                
                self.trailer=dataDictionary[@"results"][1];
                
-               NSLog(@"%@",self.trailer);
+               
                
                NSString *key = self.trailer[@"key"];
                
@@ -57,7 +50,7 @@
                // Convert the url String to a NSURL object.
                
                NSString *urlTrailerFinalString = [NSString stringWithFormat:@"%@%@", @"https://www.youtube.com/watch?v=",key];
-               NSLog(@"%@", urlTrailerFinalString);
+               
                NSURL *urlTrailerFinal = [NSURL URLWithString:urlTrailerFinalString];
 
                // Place the URL in a URL Request.
