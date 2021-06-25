@@ -31,6 +31,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 - User can search for a movie in the collection view.
 - User can view month and year of movie in the details of both the table view and collection view. 
+- User can tap of poster in detail veiw and watch the trailer of the movie. 
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
