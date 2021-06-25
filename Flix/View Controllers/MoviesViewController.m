@@ -18,6 +18,8 @@
 @property (nonatomic,strong) UIRefreshControl *refreshControl;
 @property (weak, nonatomic) IBOutlet UIButton *alertButton;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) UIActivityIndicatorView *activityView;
+
 
 @end
 
@@ -31,7 +33,15 @@
     self.tableView.dataSource = self;
     self.tableView.delegate=self;
     self.searchBar.delegate=self;
-    [self.activityIndicator startAnimating];
+    
+    
+    self.activityView = [[UIActivityIndicatorView alloc]
+                                             initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
+    self.activityView.center=self.view.center;
+    [self.activityView startAnimating];
+    [self.view addSubview:self.activityView];
+    
+    //[self.activityIndicator startAnimating];
     [self fetchMovies];
     
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -76,7 +86,7 @@
                
                
                [self.tableView reloadData];
-               [self.activityIndicator stopAnimating];
+               [self.activityView stopAnimating];
 
                // TODO: Get the array of movies
                // TODO: Store the movies in a property to use elsewhere
@@ -114,46 +124,45 @@
     cell.posterView.image=nil;
     [cell.posterView setImageWithURL:posterURL];
     
-//    NSURL *urlSmall = posterURL;
-//    NSURL *urlLarge = posterURL;
+    NSURL *urlSmall = posterURL;
+    NSURL *urlLarge = posterURL;
 
-//    NSURLRequest *requestSmall = [NSURLRequest requestWithURL:urlSmall];
-//    NSURLRequest *requestLarge = [NSURLRequest requestWithURL:urlLarge];
-//
-//    __weak MoviesViewController *weakSelf = self;
-//
-//    [cell.posterView setImageWithURLRequest:requestSmall
-//                          placeholderImage:nil
-//                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *smallImage) {
-//
-//                                       // smallImageResponse will be nil if the smallImage is already available
-//                                       // in cache (might want to do something smarter in that case).
-//                                       weakSelf.cell.posterView.alpha = 0.0;
-//                                       weakSelf.cell.imageView.image = smallImage;
-//
-//                                       [UIView animateWithDuration:0.3
-//                                                        animations:^{
-//
-//                                                            weakSelf.cell.posterView.alpha = 1.0;
-//
-//                                                        } completion:^(BOOL finished) {
-//                                                            // The AFNetworking ImageView Category only allows one request to be sent at a time
-//                                                            // per ImageView. This code must be in the completion block.
-//                                                            [weakSelf.cell.posterView setImageWithURLRequest:requestLarge
-//                                                                                  placeholderImage:smallImage
-//                                                                                           success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage * largeImage) {
-//                                                                                                weakSelf.imageView.image = largeImage;
-//                                                                                  }
-//                                                                                           failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-//                                                                                               // do something for the failure condition of the large image request
-//                                                                                               // possibly setting the ImageView's image to a default image
-//                                                                                           }];
-//                                                        }];
-//                                   }
-//                                   failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-//                                       // do something for the failure condition
-//                                       // possibly try to get the large image
-//                                   }];
+    NSURLRequest *requestSmall = [NSURLRequest requestWithURL:urlSmall];
+    NSURLRequest *requestLarge = [NSURLRequest requestWithURL:urlLarge];
+
+
+    [cell.posterView setImageWithURLRequest:requestSmall
+                          placeholderImage:nil
+                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *smallImage) {
+
+                                       // smallImageResponse will be nil if the smallImage is already available
+                                       // in cache (might want to do something smarter in that case).
+                                       cell.posterView.alpha = 0.0;
+                                       cell.posterView.image = smallImage;
+
+                                       [UIView animateWithDuration:0.3
+                                                        animations:^{
+
+                                                            cell.posterView.alpha = 1.0;
+
+                                                        } completion:^(BOOL finished) {
+                                                            // The AFNetworking ImageView Category only allows one request to be sent at a time
+                                                            // per ImageView. This code must be in the completion block.
+                                                            [cell.posterView setImageWithURLRequest:requestLarge
+                                                                                  placeholderImage:smallImage
+                                                                                           success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage * largeImage) {
+                                                                                                cell.posterView.image = largeImage;
+                                                                                  }
+                                                                                           failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+                                                                                               // do something for the failure condition of the large image request
+                                                                                               // possibly setting the ImageView's image to a default image
+                                                                                           }];
+                                                        }];
+                                   }
+                                   failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+                                       // do something for the failure condition
+                                       // possibly try to get the large image
+                                   }];
     
     
         
