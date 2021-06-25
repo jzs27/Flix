@@ -161,6 +161,8 @@
     NSLog(@"%@",genreStringNew);
     self.genreLabel.text =genreStringNew;
     
+    [self.genreLabel sizeToFit];
+    
     
     
     // Do any additional setup after loading the view.

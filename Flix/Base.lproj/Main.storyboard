@@ -294,6 +294,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Oh-Pn-BuH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="xd1-Lp-bzB" kind="relationship" relationship="rootViewController" id="eR4-hT-76c"/>
@@ -364,7 +365,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wgy-L5-nmJ"/>
+        <segue reference="fY0-io-ooC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
