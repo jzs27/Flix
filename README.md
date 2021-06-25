@@ -22,8 +22,8 @@ The following **optional** features are implemented:
 - [ ] All images fade in as they are loading.
 - User can view the large movie poster by tapping on a button.
 - [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
-- [ ] Customize the selection effect of the cell.
-- [ ] Customize the navigation bar.
+- Customize the selection effect of the cell.
+- Customize the navigation bar.
 - [ ] Customize the UI.
 - [ ] User can view the app on various device sizes and orientations.
 - Run your app on a real device.
