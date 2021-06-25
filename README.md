@@ -19,19 +19,18 @@ The following **optional** features are implemented:
 
 - User can tap a poster in the collection view to see a detail screen of that movie
 - User can search for a movie.
-- [ ] All images fade in as they are loading.
 - User can view the large movie poster by tapping on a button.
-- [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
+- For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
 - Customize the selection effect of the cell.
 - Customize the navigation bar.
-- [ ] Customize the UI.
-- [ ] User can view the app on various device sizes and orientations.
+- Customize the UI.
 - Run your app on a real device.
 
 The following **additional** features are implemented:
 - User can search for a movie in the collection view.
+- User can tap on poster in detail view and see an enlarged version. 
 - User can view month and year of movie in the details of both the table view and collection view. 
-- User can tap of poster in detail veiw and watch the trailer of the movie. 
+- User can tap of backdrop in detail view and watch the trailer of the movie. 
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
