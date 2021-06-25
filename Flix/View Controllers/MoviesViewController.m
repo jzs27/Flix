@@ -99,6 +99,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    
     
     NSDictionary *movie = self.movies[indexPath.row];
     cell.titleLabel.text =movie[@"original_title"];
