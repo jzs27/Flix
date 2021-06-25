@@ -26,7 +26,7 @@ The following **optional** features are implemented:
 - [ ] Customize the navigation bar.
 - [ ] Customize the UI.
 - [ ] User can view the app on various device sizes and orientations.
-- [ ] Run your app on a real device.
+- Run your app on a real device.
 
 The following **additional** features are implemented:
 - User can search for a movie in the collection view.
