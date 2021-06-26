@@ -8,7 +8,7 @@
 #import "MoviesGridViewController.h"
 #import "MovieCollectionCell.h"
 #import "UIImageView+AFNetworking.h"
-#import "CollectionsDetailsViewController.h"
+#import "DetailsViewController.h"
 
 @interface MoviesGridViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>;
 @property (nonatomic, strong) NSArray *movies;
@@ -24,9 +24,9 @@
     [super viewDidLoad];
 //    self.navigationItem.title = @"Movie Collection";
 //    UINavigationBar *navigationBar = self.navigationController.navigationBar;
-//        
+//
 //    navigationBar.tintColor = [UIColor colorWithRed:0.0 green:0.25 blue:0.0 alpha:0.8];
-//        
+//
 //    NSShadow *shadow = [NSShadow new];
 //    shadow.shadowColor = [[UIColor grayColor] colorWithAlphaComponent:0.5];
 //    shadow.shadowOffset = CGSizeMake(2, 2);
@@ -91,7 +91,7 @@
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:tappedCell];
     NSDictionary *movie = self.movies[indexPath.row];
     
-    CollectionsDetailsViewController *detailsViewController  = [segue destinationViewController];
+    DetailsViewController *detailsViewController  = [segue destinationViewController];
     
     detailsViewController.movie = movie;
     

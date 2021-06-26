@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="679.71014492753625" y="2504.4642857142858"/>
         </scene>
-        <!--Movies-->
+        <!--Now Playing-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MoviesViewController" sceneMemberID="viewController">
@@ -109,7 +109,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Movies" id="NYo-1m-08H"/>
+                    <navigationItem key="navigationItem" title="Now Playing" id="NYo-1m-08H"/>
                     <connections>
                         <outlet property="alertButton" destination="FbG-j7-oYY" id="CJc-5X-dmv"/>
                         <outlet property="searchBar" destination="BRX-rL-1QO" id="aO2-hL-6wr"/>
@@ -286,11 +286,11 @@
             </objects>
             <point key="canvasLocation" x="981" y="-645"/>
         </scene>
-        <!--Movies-->
+        <!--Collection-->
         <scene sceneID="Y6n-uO-2fB">
             <objects>
                 <navigationController id="obH-WV-ira" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Movies" selectedImage="reel_tabbar_icon" id="dUx-R3-dso"/>
+                    <tabBarItem key="tabBarItem" title="Collection" selectedImage="reel_tabbar_icon" id="dUx-R3-dso"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Oh-Pn-BuH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -365,7 +365,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fY0-io-ooC"/>
+        <segue reference="Wgy-L5-nmJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>

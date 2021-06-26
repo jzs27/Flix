@@ -22,9 +22,7 @@
 		A5843B7C2683DD2500D2B219 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5843B7B2683DD2500D2B219 /* DetailsViewController.m */; };
 		A5843B7F268418D900D2B219 /* MoviesGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5843B7E268418D900D2B219 /* MoviesGridViewController.m */; };
 		A5843B8226841BC000D2B219 /* MovieCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5843B8126841BC000D2B219 /* MovieCollectionCell.m */; };
-		A5843BCC268533E100D2B219 /* CollectionsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5843BCB268533E100D2B219 /* CollectionsDetailsViewController.m */; };
 		A5843BCF2685495D00D2B219 /* PosterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5843BCE2685495D00D2B219 /* PosterViewController.m */; };
-		A5843BD22685508800D2B219 /* PosterCollectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5843BD12685508800D2B219 /* PosterCollectionsViewController.m */; };
 		A5843BD4268620A400D2B219 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5843BD3268620A400D2B219 /* WebKit.framework */; };
 		A5843BD7268620E700D2B219 /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5843BD6268620E700D2B219 /* TrailerViewController.m */; };
 		C689C7169AAD35BAE2D7D6E5 /* Pods_Flix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A38F49A0A6181D90C6F15E /* Pods_Flix.framework */; };
@@ -80,12 +78,8 @@
 		A5843B7E268418D900D2B219 /* MoviesGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesGridViewController.m; sourceTree = "<group>"; };
 		A5843B8026841BC000D2B219 /* MovieCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionCell.h; sourceTree = "<group>"; };
 		A5843B8126841BC000D2B219 /* MovieCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionCell.m; sourceTree = "<group>"; };
-		A5843BCA268533E100D2B219 /* CollectionsDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionsDetailsViewController.h; sourceTree = "<group>"; };
-		A5843BCB268533E100D2B219 /* CollectionsDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionsDetailsViewController.m; sourceTree = "<group>"; };
 		A5843BCD2685495D00D2B219 /* PosterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterViewController.h; sourceTree = "<group>"; };
 		A5843BCE2685495D00D2B219 /* PosterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterViewController.m; sourceTree = "<group>"; };
-		A5843BD02685508800D2B219 /* PosterCollectionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterCollectionsViewController.h; sourceTree = "<group>"; };
-		A5843BD12685508800D2B219 /* PosterCollectionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterCollectionsViewController.m; sourceTree = "<group>"; };
 		A5843BD3268620A400D2B219 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A5843BD5268620E700D2B219 /* TrailerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailerViewController.h; sourceTree = "<group>"; };
 		A5843BD6268620E700D2B219 /* TrailerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailerViewController.m; sourceTree = "<group>"; };
@@ -202,12 +196,8 @@
 				A5843B7E268418D900D2B219 /* MoviesGridViewController.m */,
 				A5843B7026839CE500D2B219 /* MoviesViewController.h */,
 				A5843B7126839CE500D2B219 /* MoviesViewController.m */,
-				A5843BCA268533E100D2B219 /* CollectionsDetailsViewController.h */,
-				A5843BCB268533E100D2B219 /* CollectionsDetailsViewController.m */,
 				A5843BCD2685495D00D2B219 /* PosterViewController.h */,
 				A5843BCE2685495D00D2B219 /* PosterViewController.m */,
-				A5843BD02685508800D2B219 /* PosterCollectionsViewController.h */,
-				A5843BD12685508800D2B219 /* PosterCollectionsViewController.m */,
 				A5843BD5268620E700D2B219 /* TrailerViewController.h */,
 				A5843BD6268620E700D2B219 /* TrailerViewController.m */,
 			);
@@ -488,8 +478,6 @@
 				A5843B7C2683DD2500D2B219 /* DetailsViewController.m in Sources */,
 				A5843BD7268620E700D2B219 /* TrailerViewController.m in Sources */,
 				A5843B8226841BC000D2B219 /* MovieCollectionCell.m in Sources */,
-				A5843BCC268533E100D2B219 /* CollectionsDetailsViewController.m in Sources */,
-				A5843BD22685508800D2B219 /* PosterCollectionsViewController.m in Sources */,
 				A5843B4B2683928800D2B219 /* main.m in Sources */,
 				A5843B3D2683928700D2B219 /* SceneDelegate.m in Sources */,
 				A5843B7F268418D900D2B219 /* MoviesGridViewController.m in Sources */,
