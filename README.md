@@ -35,7 +35,7 @@ The following **additional** features are implemented:
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
 1. One is able to connect so many different part of the movie API to the app (eg. ratings, popularity, similar movies).
-2. One is able to impliment animations to move from one part of the app to another. 
+2. One is able to implement animations to move from one part of the app to another. 
 
 ## Video Walkthrough
 
