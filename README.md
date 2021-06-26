@@ -1,7 +1,7 @@
 # Project 2 - Flix
 Flix is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **5** hours spent in total
+Time spent: **17** hours spent in total
 
 ## User Stories
 
@@ -18,7 +18,7 @@ The following **required** functionality is complete:
 The following **optional** features are implemented:
 
 - User can tap a poster in the collection view to see a detail screen of that movie
-- User can search for a movie.
+- User can search for a movie in the table view and the collection view. 
 - User can view the large movie poster by tapping on a button.
 - For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
 - Customize the selection effect of the cell.
@@ -27,27 +27,30 @@ The following **optional** features are implemented:
 - Run your app on a real device.
 
 The following **additional** features are implemented:
-- User can search for a movie in the collection view.
 - User can tap on poster in detail view and see an enlarged version. 
-- User can view month and year of movie in the details of both the table view and collection view. 
+- User can view month and year of movie in the detail view. 
 - User can tap of backdrop in detail view and watch the trailer of the movie. 
+- User can view the genres of the movie in the detail view. 
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. One is able to connect so many different part of the movie API to the app (eg. ratings, popularity, similar movies).
+2. One is able to impliment animations to move from one part of the app to another. 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
-
-
+![ezgif com-gif-maker (8)](https://user-images.githubusercontent.com/71947227/123494906-1fa4fc80-d5e7-11eb-9d7d-7a9c892f89e2.gif)
+![ezgif com-gif-maker (9)](https://user-images.githubusercontent.com/71947227/123494808-c046ec80-d5e6-11eb-8aa7-0698f7ac8820.gif)
+![ezgif com-gif-maker (10)](https://user-images.githubusercontent.com/71947227/123494810-c210b000-d5e6-11eb-93d0-60a6eabf628b.gif)
+![ezgif com-gif-maker (11)](https://user-images.githubusercontent.com/71947227/123494921-2df31880-d5e7-11eb-949e-1f74fe62b29a.gif)
 GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+I mistakenly wasted a lot of time remaking view controllers since I did not realize you could link multiples view controllers to the same one. 
 
 ## Credits
 
