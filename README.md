@@ -40,6 +40,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+
 ![ezgif com-gif-maker (8)](https://user-images.githubusercontent.com/71947227/123494906-1fa4fc80-d5e7-11eb-9d7d-7a9c892f89e2.gif)
 ![ezgif com-gif-maker (9)](https://user-images.githubusercontent.com/71947227/123494808-c046ec80-d5e6-11eb-8aa7-0698f7ac8820.gif)
 ![ezgif com-gif-maker (10)](https://user-images.githubusercontent.com/71947227/123494810-c210b000-d5e6-11eb-93d0-60a6eabf628b.gif)
